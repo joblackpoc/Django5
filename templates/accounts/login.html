@@ -7,11 +7,10 @@
             <div class="col-md-7 col-xl-6 mx-auto">
                 <div class="rbt-contact-form contact-form-style-1 max-width-auto">
                     <h3 class="title">Login</h3>
-                    
+                    {% include 'patials/messages.html' %}
                     <form class="max-width-auto" method="post" action="{% url 'login' %}">
                         {% csrf_token %}
-                        {% include 'partials/messages.html' %}
-                        <input type="hidden" name="csrfmiddlewaretoken" value="">
+                         <!--<input type="hidden" name="csrfmiddlewaretoken" value="">-->
                         <div class="form-group">
                             <input name="username" type="text" required="">
                             <label>Username *</label>
