@@ -28,7 +28,7 @@ def register(request):
         else:
             return redirect('register') 
     else:
-        return render(request, 'accounts/register.html')
+        return render(request, 'registration/register.html')
 
 def login(request):
     if request.method == 'POST':
@@ -43,8 +43,8 @@ def login(request):
             messages.error(request, 'Invalid credentials')
             return redirect('login')
     else:
-        return render(request, 'accounts/login.html')
+        return render(request, 'registration/login.html')
 
 def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+    return render(request, 'registration/dashboard.html')
 
